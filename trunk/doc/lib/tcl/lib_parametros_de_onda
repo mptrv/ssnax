@@ -1,0 +1,153 @@
+# DOCUMENTAÇÃO
+# ============
+#
+# Gerado por 'grep \# nome_do_arquivo' e simples edição com o 'vim'.
+
+################################################################################
+#
+# Biblioteca:
+#
+# Parâmetros de Onda
+# ========== == ====
+#
+################################################################################
+#
+# Implementação de diversas funções que calculam os parâmetros de onda,
+# considerando qualquer meio com perdas.
+#
+################################################################################
+#
+# Autores:
+#
+#	Jacqueline Marchetti
+#	Marcelo Porto Trevizan
+#
+################################################################################
+#
+# Arquivo				: lib_parametros_de_onda.tcl
+# Arquivo principal	: ssna.tcl
+# Tipo					: livre, aberto
+# Última alteração	: 20-09-2007
+# Versão					: 0.0.0
+################################################################################
+
+###############################################################################
+#### Procedimento: Epsilon -- Valor de Permissividade ###
+## Descricao : procedimento auxiliar que calcula o valor de Epsilon, dado 
+## o Espilon Relativo.
+## Argumentos: epsilonr (permissividade)
+## Constantes utilizadas: EPSILON_0 (permissividade no vacuo)
+## Retorno: valor proximo do real para a permissividade do meio 
+## Notas: (Nenhuma.)
+###############################################################################
+################################################################################
+
+###############################################################################
+#### Procedimento: Mi -- Valor de Permeabilidade ###
+## Descricao : procedimento auxiliar que calcula o valor de Mi
+## Argumentos: mir (permeabilidade do meio)
+## Constantes utilizadas: MI0 (permeabilidade no vacuo)
+## Retorno: valor proximo do real para a permeabilidade do meio
+## Notas: (Nenhuma.)
+###############################################################################
+################################################################################
+
+###############################################################################
+#### Procedimento: Calculo ###
+## Descricao : procedimento auxiliar que realiza o calculo de alpha e beta, sendo as equacoes diferenciadas apenas por um elemento constante(cte)
+## Argumentos: w (velocidade angular), mir (permeabilidade do meio), epsilonr (permissividade), Sigma (condutividade do meio), cte (elemento presente na equacao da constante de atenuacao e da constante de fase responsavel pela diferenciacao entre estas equacoes)
+## Retorno: resultado da constante de atenuacao ou de fase
+## Notas: (Nenhuma.)
+###############################################################################
+################################################################################
+
+################################################################################
+#### Procedimento: Alpha -- Constante de Atenuacao ###
+## Descricao : Calculo da constante de atenuacao.
+## Argumentos: w (velocidade angular), mir (permeabilidade relativa do meio), epsilonr (permissividade relativa do meio), Sigma (condutividade do meio)
+## Retorno: resultado da constante de atenuacao 
+## Notas: (Nenhuma.)
+####################################################################################################
+####################################################################################################
+
+####################################################################################################
+#### Procedimento: Beta -- Constante de Fase ###
+## Descricao : Calculo da constante de fase.
+## Argumentos: w (velocidade angular), mir (permeabilidade relativa do meio), epsilonr (permissividade relativa do meio), Sigma (condutividade do meio)
+## Retorno: resultado da constante de fase 
+## Notas: (Nenhuma.)
+##################################################################################################
+##################################################################################################
+
+####################################################################################################
+#### Procedimento: Lambda -- Comprimento de onda ###
+## Descricao : Calculo do comprimento de onda.
+## Argumentos: Beta (constante de fase)
+## Constantes utilizadas: pi
+## Retorno: comprimento de onda
+## Notas: (Nenhuma.)
+##################################################################################################
+##################################################################################################
+
+##################################################################################################
+#### Procedimento: V -- Velocidade de propagacao  ###
+## Descricao : Calculo da velocidade de propagacao.
+## Argumentos: w (velocidade angular), Beta (constante de fase), 
+## Retorno: velocidade de propagacao
+## Notas: (Nenhuma.)
+###############################################################################################
+##################################################################################################
+
+#################################################################################################
+#### Procedimento: Profundidade_Penetracao_Pelicular -- Profundidade de Penetracao Pelicular  ###
+## Descricao : Calculo da profundidade de penetracao pelicular.
+## Argumentos: Alpha (constante de atenuacao), 
+## Retorno: profundidade de penetracao peculiar
+## Notas: (Nenhuma.)
+##################################################################################
+#############################################################################################
+
+###########################################################################################
+#### Procedimento: Tg_Perdas_Sigma -- Tangente de Perdas Dado Sigma  ###
+## Descricao : Calculo da tangente de perdas efetivas a partir do sigma efetivo.
+## Argumentos: Sigma (sigma efetivo), w (velocidade angular), epsilonr (permissividade relativa)
+## Retorno: tangente de perdas efetivas
+## Notas: (Nenhuma.)
+##########################################################################################
+############################################################################################
+
+#################################################################################################
+#### Procedimento: Sigma -- Sigma dada Tangente de perdas  ###
+## Descricao : Calculo do sigma efetivo dada a tangete de perdas efetivas.
+## Argumentos: Tg_Perdas (tangente de perdas efetivas), w (velocidade angular), epsilonr (permissividade relativa)
+## Retorno: Sigma efetivo
+## Notas: (Nenhuma.)
+#################################################################################################
+##################################################################################################
+
+#################################################################################################
+#### Procedimento: T -- Periodo
+## Descricao : Calculo do periodo.
+## Argumentos: f (frequencia, em Hertz)
+## Retorno: periodo T, em segundos
+## Notas: (Nenhuma.)
+#################################################################################################
+###############################################################################################
+
+#################################################################################################
+#### Procedimento: W - Velocidade Angular
+## Descricao : Calculo da velocidade angular
+## Argumentos: f (frequencia, em Hertz)
+## Retorno: velocidade angular w, em rad/s
+## Notas: (Nenhuma.)
+#################################################################################################
+###############################################################################################
+
+#################################################################################################
+#### Procedimento: Zi -- Impedancia Intrinseca
+## Descricao : Calculo da impedancia intrinseca
+## Argumentos: w (velocidade angular), mir (permeabilidade relativa do meio), epsilonr (permissividade relativa do meio), Sigma (condutividade do meio)
+## Retorno: impedancia intrinseca complexa
+## Notas: (Nenhuma.)
+#################################################################################################
+###############################################################################################
