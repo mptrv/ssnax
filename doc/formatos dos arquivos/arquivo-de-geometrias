@@ -1,0 +1,47 @@
+FORMATO	E CARACTERÍSTICAS DO ARQUIVO DE GEOMETRIAS
+======= = =============== == ======= == ==========
+
+	As linhas em branco não serão consideradas. Os caracteres '#' e '%', como
+primeiro caracter não branco, definem uma linha de comentário. Tais linhas não
+serão consideradas. Os brancos iniciais também não serão considerados.
+
+	Os campos podem ser separados por qualquer caracter branco, exceto '\n'
+(nova linha).
+
+	A linha não possui limite de caracteres.
+
+	Os campos numéricos, quando do tipo ponto flutuante, serão interpretados com
+precisão dupla ("double float").
+
+	As dimensões, informadas nos campos numéricos, serão interpretadas em metros.
+
+	Há diferenciação entre maiúsculas e minúsculas, a não ser quando relatado o
+contrário.
+
+	O programa 'fdtd3d-paralelizado', ao ler o arquivo, irá exibir mensagens de
+erro se for encontrado algum.
+
+	Geometrias Implementadas e Seus Argumentos
+	---------- ------------- - ---- ----------
+
+	Cavidade	MATERIAL	x0	x1	y0	y1	z0	z1
+	Cubo		MATERIAL	x0	x1	y0	y1	z0	z1
+	Cilindro	MATERIAL	xc	yc	zc	r	c	o
+	Esfera		MATERIAL	xc	yc	zc	r
+
+	Descrição dos Argumentos
+	--------- --- ----------
+
+	. MATERIAL : material da geometria; terá valores válidos conforme a tabela
+	  de materiais, definida em arquivo próprio, carregada
+	
+	. (x0, y0, z0), (x1, y1, z1) : vértices diagonalmente opostos de um
+	paralelepípedo
+
+	. (xc, yc, zc) : ponto de centro
+
+	. r : raio
+
+	. c : comprimento
+
+	. o : orientação -- valores válidos: 'X', 'x', 'Y', 'y', 'Z', 'z'

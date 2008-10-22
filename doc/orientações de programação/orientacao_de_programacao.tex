@@ -1,0 +1,84 @@
+% Orientações de Programação
+%
+% Orientações de programação do Sistema de Simulação Numérica e Análises --
+% SSNA. O objetivo deste documento é relatar estruturas, detalhes específicos
+% e técnicas de programação utilizadas para o desenvolvimento do sistema. Não
+% intenciona-se que 100% de tudo seja relatado e sim o que for conveniente
+% por questões de padronização, funcionalidade e documentação.
+%
+% arquivo           : orientacao_de_programacao.tex
+% autor             : Marcelo P. Trevizan
+% tipo de documento : livre, aberto
+% Última alteração	: 25-08-2007
+% Versão			: 0.0.0
+
+% ------------------------------------------------------------------------------
+% Classe do documento.
+
+\documentclass[a4paper,12pt]{article}
+
+% ------------------------------------------------------------------------------
+% Textos pré-definidos.
+
+% Nomes de variáveis de ambiente.
+\newcommand{\SSNADIR}{\cod{\$SSNA\_DIR}\xspace}
+\newcommand{\SSNATCLLIBDIR}{\cod{\$SSNA\_TCLLIB\_DIR}\xspace}
+
+% ------------------------------------------------------------------------------
+% Pacotes.
+
+\usepackage{mestrado}
+\onehalfspacing
+
+\title{Orientações de Programação para o SSNA}
+\author{}
+%\date{}
+
+% ------------------------------------------------------------------------------
+% Corpo do documento.
+
+\begin{document}
+	\maketitle
+
+    \section{Apresentação}
+
+    Orientações de programação do Sistema de Simulação Numérica e Análises -- SSNA. O objetivo deste documento é relatar estruturas, detalhes específicos e técnicas de programação utilizadas para o desenvolvimento do sistema. Não intenciona-se que 100\% de tudo seja relatado e sim o que for conveniente por questões de padronização, funcionalidade e documentação.
+
+    A seguir, seguem as seções com as orientações para a programação das diversas partes do sistema.
+
+    % ------------------------------------------------------------------------------
+    \section{Variáveis de Ambiente}
+
+    O sistema considera as variáveis de ambiente citadas a seguir. Caso não existam, elas serão automaticamente criadas pelo executável \cod{\SSNADIR/ssna}.
+
+    \begin{description}
+        \item[\SSNADIR:] Diretório raiz do sistema.
+    \end{description}
+
+    \section{Variáveis de Diretorias}
+
+    \ldots
+
+    % ------------------------------------------------------------------------------
+    \section{Bibliotecas}
+
+    Atualmente, há bibliotecas em C e em Tcl.
+
+    Para as bibliotecas em Tcl, considerar:
+
+    \begin{itemize}
+        \item alocação no diretório \cod{\ldots/lib/tcl};
+        \item nomes iniciados por \cod{lib\_};
+        \item conter cabeçalho padrão de biblioteca SSNA;
+        \item conter trecho de código que evite dupla carga da biblioteca (que pode ocorrer durante a carga de outras bibliotecas ou dos módulos) -- ver \cod{\ldots/lib/tcl/lib\_um\_teste.tcl} para exemplo de código;
+        \item as bibliotecas deverão ser carregadas usando-se, preferencialmente, a variável de ambiente \cod{\$SSNA\_TCLLIB} para a localização dos seus correspondentes arquivos.
+    \end{itemize}
+
+	% ------------------------------------------------------------------------------
+	% Base de dados das bibliografias e formatação bibliográfica.
+
+    %\bibliographystyle{plainnat}
+    %\bibliography{$HOME/Trabalhos/Bibliografias/...}
+
+\end{document}
+
